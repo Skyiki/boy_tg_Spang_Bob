@@ -123,13 +123,13 @@ def bestfriend(message):
 def bestfriend(message):
     bot.send_message(chat_id=message.chat.id, text=best_friends)
 
-def bestfriend(message):
+def bestfriendу(message):
     msg = "есть друзья"
     return msg in message.text.lower()
 
 
-@bot.message_handler(content_types=['text'], func=bestfriend)
-def bestfriend(message):
+@bot.message_handler(content_types=['text'], func=bestfriendу)
+def bestfriendу(message):
     bot.send_message(chat_id=message.chat.id, text=best_friends)
 
 
