@@ -63,5 +63,20 @@ def aboutme_func(message):
                                                    f'новое и интересное. Бикини Боттом - это место, где возможно все, '
                                                    f'и я всегда готов к новым приключениям и безумным выходкам!')
 
+def hello(message):
+    msg = 'привет'
+    return msg in message.text.lower()
+
+@bot.message_handler(content_types=['text'], func=hello)
+def hello_func(message):
+    bot.send_message(chat_id=message.chat.id, text='Привет! Сегодня будет незабываемый день в Бикини Боттом!')
+
+def bue(message):
+    msg = "пока"
+    return msg in message.text.lower()
+
+@bot.message_handler(content_types=['text'], func=bue)
+def hello_func(message):
+    bot.send_message(chat_id=message.chat.id, text='До скорой встречи! Боб никогда не забудет вас.')
 
 bot.infinity_polling()
