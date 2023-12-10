@@ -40,9 +40,7 @@ def help_func(message):
 
 @bot.message_handler(commands=['hobby'])
 def help_func(message):
-    bot.send_message(chat_id=message.chat.id, text=f'Я работаю в Красти Краб, лучшем ресторане на свете, где я '
-                                                   f'готовлю вкуснейшие крабсбургеры для своих любимых клиентов.\n'
-                                                   f'Мне нравится в свободное время ловить медуз с моим другом Патриком.'
+    bot.send_message(chat_id=message.chat.id, text=f'Мне нравится в свободное время ловить медуз с моим другом Патриком.'
                                                    f' Это наше общее хобби, которое мы оба очень любим.'
                                                    f' Мы проводим много времени на пляже, пытаясь поймать как '
                                                    f'можно больше медуз.\n'
@@ -51,8 +49,7 @@ def help_func(message):
 
 @bot.message_handler(commands=['aboutme'])
 def aboutme_func(message):
-    bot.send_message(chat_id=message.chat.id, text=
-                                                   f'Моя жизнь полна приключений, забавных ситуаций и самых верных '
+    bot.send_message(chat_id=message.chat.id, text=f'Моя жизнь полна приключений, забавных ситуаций и самых верных '
                                                    f'друзей!'
                                                    f' Мой лучший друг - это, конечно же, Патрик Стар, глуповатый, '
                                                    f'но невероятно милый и забавный звезда.'
@@ -63,6 +60,12 @@ def aboutme_func(message):
                                                    f'новое и интересное. Бикини Боттом - это место, где возможно все, '
                                                    f'и я всегда готов к новым приключениям и безумным выходкам!')
 
+@bot.message_handler(commands=['job'])
+def job_func(message):
+    bot.send_message(chat_id=message.chat.id, text=f'Я работаю в Красти Краб, лучшем ресторане на свете, где я '
+                                                   f'готовлю вкуснейшие крабсбургеры для своих любимых клиентов.'
+                                                   f' Я обожаю свою работу!'
+    )
 def hello(message):
     msg = 'привет'
     return msg in message.text.lower()
@@ -78,5 +81,30 @@ def bue(message):
 @bot.message_handler(content_types=['text'], func=bue)
 def hello_func(message):
     bot.send_message(chat_id=message.chat.id, text='До скорой встречи! Боб никогда не забудет вас.')
+
+def (message):
+    msg = "пока"
+    return msg in message.text.lower()
+
+@bot.message_handler(content_types=['text'], func=bue)
+def hello_func(message):
+    bot.send_message(chat_id=message.chat.id, text='До скорой встречи! Боб никогда не забудет вас.')
+
+def bue(message):
+    msg = "пока"
+    return msg in message.text.lower()
+
+@bot.message_handler(content_types=['text'], func=bue)
+def hello_func(message):
+    bot.send_message(chat_id=message.chat.id, text='До скорой встречи! Боб никогда не забудет вас.')
+
+def bue(message):
+    msg = "пока"
+    return msg in message.text.lower()
+
+@bot.message_handler(content_types=['text'], func=bue)
+def hello_func(message):
+    bot.send_message(chat_id=message.chat.id, text='До скорой встречи! Боб никогда не забудет вас.')
+
 
 bot.infinity_polling()
