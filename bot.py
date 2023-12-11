@@ -79,7 +79,7 @@ def job_func(message):
 
 @bot.message_handler(commands=['question'])
 def question_func(message):
-    bot.send.message(chat_id=message.chst.id, text=f"На что может ответить бот: \n"
+    bot.send_message(chat_id=message.chat.id, text=f"На что может ответить бот: \n"
                                                    f"1 - Привет \n"
                                                    f"2 - Пока \n"
                                                    f"3 - Как дела? \n"
