@@ -148,17 +148,17 @@ def home(message):
 
 
 @bot.message_handler(content_types=['text'], func=home)
-def home_func(message):
+def home(message):
     bot.send_message(chat_id=message.chat.id, text='Я живу в прекрасном подводном городе Бикини Боттом!')
 
 
 def homes(message):
-    msg = "Где живешь"
+    msg = "Где живёшь"
     return msg in message.text.lower()
 
 
 @bot.message_handler(content_types=['text'], func=homes)
-def homes_func(message):
+def homes(message):
     bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананас на окраине Бикини Боттом!')
 
 def eyess(message):
@@ -167,7 +167,7 @@ def eyess(message):
 
 
 @bot.message_handler(content_types=['text'], func=eyess)
-def eyess_func(message):
+def eyess(message):
     bot.send_message(chat_id=message.chat.id, text='Трудная задачка их посчитать, но я думаю их пять!')
 
 def eyes(message):
@@ -176,7 +176,7 @@ def eyes(message):
 
 
 @bot.message_handler(content_types=['text'], func=eyes)
-def eyes_func(message):
+def eyes(message):
     bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананас на окраине Бикини Боттом!')
 
 
