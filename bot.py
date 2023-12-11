@@ -123,6 +123,7 @@ def bestfriend(message):
 def bestfriend(message):
     bot.send_message(chat_id=message.chat.id, text=best_friends)
 
+
 def bestfriendу(message):
     msg = "есть друзья"
     return msg in message.text.lower()
@@ -142,6 +143,7 @@ def jellyfish(message):
 def jellyfish(message):
     bot.send_message(chat_id=message.chat.id, text='Я обожаю ловить медуз с моим лучшим другом - Патриком!')
 
+
 def home(message):
     msg = "Откуда ты"
     return msg in message.text.lower()
@@ -150,6 +152,7 @@ def home(message):
 @bot.message_handler(content_types=['text'], func=home)
 def home(message):
     bot.send_message(chat_id=message.chat.id, text='Я живу в прекрасном подводном городе Бикини Боттом!')
+
 
 
 def homes(message):
@@ -161,6 +164,7 @@ def homes(message):
 def homes(message):
     bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананас на окраине Бикини Боттом!')
 
+
 def eyess(message):
     msg = "сколько у тебя ресниц"
     return msg in message.text.lower()
@@ -169,6 +173,8 @@ def eyess(message):
 @bot.message_handler(content_types=['text'], func=eyess)
 def eyess(message):
     bot.send_message(chat_id=message.chat.id, text='Трудная задачка их посчитать, но я думаю их пять!')
+
+
 
 def eyes(message):
     msg = "какого цвета глаза"
