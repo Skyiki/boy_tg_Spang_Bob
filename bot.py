@@ -142,5 +142,42 @@ def jellyfish(message):
 def jellyfish(message):
     bot.send_message(chat_id=message.chat.id, text='Я обожаю ловить медуз с моим лучшим другом - Патриком!')
 
+def home(message):
+    msg = "Откуда ты"
+    return msg in message.text.lower()
+
+
+@bot.message_handler(content_types=['text'], func=home)
+def home_func(message):
+    bot.send_message(chat_id=message.chat.id, text='Я живу в прекрасном подводном городе Бикини Боттом!')
+
+
+def homes(message):
+    msg = "Где живешь"
+    return msg in message.text.lower()
+
+
+@bot.message_handler(content_types=['text'], func=homes)
+def homes_func(message):
+    bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананас на окраине Бикини Боттом!')
+
+def eyess(message):
+    msg = "сколько у тебя ресниц"
+    return msg in message.text.lower()
+
+
+@bot.message_handler(content_types=['text'], func=eyess)
+def eyess_func(message):
+    bot.send_message(chat_id=message.chat.id, text='Трудная задачка их посчитать, но я думаю их пять!')
+
+def eyes(message):
+    msg = "какого цвета глаза"
+    return msg in message.text.lower()
+
+
+@bot.message_handler(content_types=['text'], func=eyes)
+def eyes_func(message):
+    bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананас на окраине Бикини Боттом!')
+
 
 bot.infinity_polling()
