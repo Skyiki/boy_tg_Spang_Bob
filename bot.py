@@ -145,10 +145,8 @@ def jellyfish(message):
 
 
 def home(message):
-    msg = "Откуда ты"
+    msg = "откуда ты"
     return msg in message.text.lower()
-
-
 @bot.message_handler(content_types=['text'], func=home)
 def home(message):
     bot.send_message(chat_id=message.chat.id, text='Я живу в прекрасном подводном городе Бикини Боттом!')
@@ -156,19 +154,18 @@ def home(message):
 
 
 def homes(message):
-    msg = "Где живёшь"
+    msg = "где живёшь"
     return msg in message.text.lower()
-
 
 @bot.message_handler(content_types=['text'], func=homes)
 def homes(message):
-    bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананас на окраине Бикини Боттом!')
+    bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананасе на окраине Бикини Боттом!')
+
 
 
 def eyess(message):
     msg = "сколько у тебя ресниц"
     return msg in message.text.lower()
-
 
 @bot.message_handler(content_types=['text'], func=eyess)
 def eyess(message):
@@ -183,7 +180,7 @@ def eyes(message):
 
 @bot.message_handler(content_types=['text'], func=eyes)
 def eyes(message):
-    bot.send_message(chat_id=message.chat.id, text='Я живу своём доме-ананас на окраине Бикини Боттом!')
+    bot.send_message(chat_id=message.chat.id, text='Мои глаза? Они похожи на воду! Такие же голубые.')
 
 
 bot.infinity_polling()
