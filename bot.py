@@ -6,14 +6,15 @@ from telebot import types
 token = '6682935044:AAEnE2y8KHraymUKeaxulz-4p0l5BWfcyhg'
 bot = telebot.TeleBot(token=token)
 
-function = ["start", "help", 'hobby', 'aboutme', 'job']
+function = ["start", "help", 'hobby', 'aboutme', 'job', "question"]
 
 function_description = {
     "start": "Начало работы бота",
     "help": "Справочная информация о доступных командах и их функциональности.",
     "hobby": "Рассказывает про свои увлечения, работу, хобби.",
     "aboutme": "Рассказывает про себя.",
-    "job": "Рассказывает про работу."
+    "job": "Рассказывает про работу.",
+    "question": "Показывает список на какие вопросы может ответить бот."
 }
 
 
@@ -34,12 +35,13 @@ def start_func(message):
 @bot.message_handler(commands=['help'])
 def help_func(message):
     bot.send_message(chat_id=message.chat.id, text=f"Я умею: \n"
-                                                   f"/start - запуск бота. \n"
-                                                   f"/help - справочная информация о доступных командах и их "
+                                                   f"/start - Запуск бота. \n"
+                                                   f"/help - Справочная информация о доступных командах и их "
                                                    f"функциональности. \n"
-                                                   f"/hobby - рассказывает про свои увлечения, работу, хобби. \n"
-                                                   f"/aboutme - рассказывает про себя. \n"
-                                                   f"/job - Рассказывает про работу."
+                                                   f"/hobby - Рассказывает про свои увлечения, работу, хобби. \n"
+                                                   f"/aboutme - Рассказывает про себя. \n"
+                                                   f"/job - Рассказывает про работу. \n"
+                                                   f"/question - Показывает список на какие вопросы может ответить бот."
                      )
 
 
@@ -75,6 +77,18 @@ def job_func(message):
                                                    f' Я обожаю свою работу!'
                      )
 
+@bot.message_handler(commands=['question'])
+def question_func(message):
+    bot.send.message(chat_id=message.chst.id, text=f"На что может ответить бот: \n"
+                                                   f"1 - Привет \n"
+                                                   f"2 - Пока \n"
+                                                   f"3 - Как дела? \n"
+                                                   f"4 - Кто твой друг?| Есть друзья? \n"
+                                                   f"5 - Кого любишь ловить со своим другом? \n"
+                                                   f"6 - Откуда ты?| Где живёшь? \n"
+                                                   f"7 - Сколько у тебя ресниц? \n"
+                                                   f"8 - Какого цвета глаза? \n"
+                     )
 
 def hello(message):
     msg = 'привет'
