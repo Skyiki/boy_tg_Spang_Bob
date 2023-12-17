@@ -46,9 +46,9 @@ def help_func(message):
 
 
 @bot.message_handler(commands=['hobby'])
-def help_func(message):
-    bot.send_message(chat_id=message.chat.id,
-                     text=f'Мне нравится в свободное время ловить медуз с моим другом Патриком.'
+def hobby_func(message):
+    bot.send_photo(message.chat.id, open("gubka-bob-zadnii-fon-instagram-46.png", "rb"))
+    bot.send_message(message.chat.id, text=f'Мне нравится в свободное время ловить медуз с моим другом Патриком.'
                           f' Это наше общее хобби, которое мы оба очень любим.'
                           f' Мы проводим много времени на пляже, пытаясь поймать как '
                           f'можно больше медуз.\n'
@@ -113,7 +113,7 @@ def bue(message):
 how_are_you = ['Отлично! Иду с Патриком ловить медуз!', "Отлично, возвращаюсь домой из Красти Краба.",
                "Медузительно! Поймал несколько медуз сегодня!"]
 #random_index = random.randrange(len(how_are_you)) один из вариантов кода
-how_ares_you = random.choice(how_are_you)
+how_ares_you = how_are_you[random.choice(range(len(how_are_you)))]
 
 def howareyou(message):
     msg = "как дела"
@@ -122,12 +122,12 @@ def howareyou(message):
 
 @bot.message_handler(content_types=['text'], func=howareyou)
 def howareyou_func(message):
-    bot.send_message(chat_id=message.chat.id, text=f'{how_ares_you}')
+    bot.send_message(chat_id=message.chat.id, text=how_ares_you)
 
 
 #тоже список ответов
 best_friend = ["У меня много друзей: Патрик, Скидвард, Мистер Крабс, Сенди и много кто ещё!", "Мой лучший друг - Гэри!"]
-best_friends = random.choice(best_friend)
+best_friends = best_friend[random.choice(range(len(best_friend)))]
 def bestfriend(message):
     msg = "кто твой друг"
     return msg in message.text.lower()
@@ -195,6 +195,5 @@ def eyes(message):
 @bot.message_handler(content_types=['text'], func=eyes)
 def eyes(message):
     bot.send_message(chat_id=message.chat.id, text='Мои глаза? Они похожи на воду! Такие же голубые.')
-
 
 bot.infinity_polling()
