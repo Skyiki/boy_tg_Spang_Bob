@@ -3,7 +3,7 @@ import random
 
 from telebot import types
 
-token = '6682935044:AAEnE2y8KHraymUKeaxulz-4p0l5BWfcyhg'
+token = '-'
 bot = telebot.TeleBot(token=token)
 
 function = ["start", "help", 'hobby', 'aboutme', 'job', "question"]
